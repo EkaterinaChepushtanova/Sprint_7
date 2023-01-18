@@ -26,7 +26,6 @@ public class CourierCreateTest {
         client.create(generator.getDefault());
         Response response = client.create(generator.getDefault());
         checks.creatingTwiceFailed(response);
-
     }
 
     @Test
@@ -34,7 +33,6 @@ public class CourierCreateTest {
     public void courierCannotBeCreatedWithoutPasswordTest() {
         Response response = client.create(generator.notFullData());
         checks.creatingWithoutPasswordFailed(response);
-
     }
 
     @After
